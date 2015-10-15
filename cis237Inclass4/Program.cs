@@ -10,6 +10,29 @@ namespace cis237Inclass4
     {
         static void Main(string[] args)
         {
+
+            MyLinkList myLinkList = new MyLinkList();
+
+            myLinkList.Add("first");
+            myLinkList.Add("second");
+            myLinkList.Add("third");
+            myLinkList.Add("fourth");
+
+            for (Node x = myLinkList.Head; x != null; x = x.Next)
+            {
+                Console.WriteLine(x.Data);
+            }
+            Console.WriteLine();
+            Console.WriteLine();
+
+            myLinkList.Delete(2);
+            myLinkList.Delete(2);
+
+            for (Node x = myLinkList.Head; x != null; x = x.Next)
+            {
+                Console.WriteLine(x.Data);
+            }
+
         }
     }
 }
